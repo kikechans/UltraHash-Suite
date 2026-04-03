@@ -1,115 +1,104 @@
-# UltraHash-Suite
-
-```markdown
 # 🔐 UltraHash-Suite
-> **The multi-engine hash identifier for CTF & HTB addicts.** 💀💉
+> **"Identify, Analyze, Pwn."** El identificador de hashes definitivo para adictos a **HTB**, **CTF** y laboratorios de seguridad. 💀💉
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Platform: Linux](https://img.shields.io/badge/Platform-Linux-lightgrey.svg)](https://www.linux.org/)
-[![Shell: Bash](https://img.shields.io/badge/Shell-Bash-blue.svg)](https://www.gnu.org/software/bash/)
+![GitHub Repo Size](https://img.shields.io/github/repo-size/TU_USUARIO/UltraHash-Suite?color=red&style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Linux-lightgrey?style=for-the-badge&logo=linux)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-blue?style=for-the-badge)
 
 ---
 
 ## 🧠 ¿Qué es UltraHash-Suite?
 
-**UltraHash-Suite** es una utilidad de alto rendimiento escrita en **Bash** diseñada para analistas de seguridad y jugadores de CTF. Olvídate de probar herramientas una por una; identifica cualquier hash desde tu terminal combinando la potencia de los mejores motores del mercado en un solo comando.
+**UltraHash-Suite** es una navaja suiza en **Bash** diseñada para ahorrarte tiempo cuando los minutos cuentan. Identifica cualquier hash desde tu terminal combinando tres motores de élite en una sola ejecución. 🎯
 
-### 🛠 Motores Integrados:
-* 🟢 **Name-That-Hash**: El estándar moderno de identificación.
-* 🔵 **Haiti**: Referencias cruzadas y formatos adicionales.
-* 🌐 **CrackStation**: Consulta automática en el motor online más potente.
+### 🛡️ Los 3 Pilares del Suite:
+* 🟢 **Name-That-Hash**: El motor más moderno y preciso de detección.
+* 🔵 **Haiti**: Referencias cruzadas y formatos listos para `hashcat` o `john`.
+* 🌐 **CrackStation**: Enlace directo para intentar el crackeo instantáneo online.
 
 ---
 
-## ✨ Características
-- 🔍 **Identificación Multi-Motor**: Comprobación simultánea para máxima precisión.
-- ⚡ **Zero Friction**: Diseñado para ser invocado en segundos durante una intrusión.
-- 🎨 **Terminal UI**: Salida limpia con colores para diferenciar tipos de hashes.
-- 🌐 **Deep Web Search**: Integración opcional con CrackStation vía navegador.
-- 🐧 **Linux Native**: Optimizado para entornos como Kali, Parrot o tu propia build.
+## ✨ Características Destacadas
+- 🔍 **Detección Multi-Capa**: No te conformes con una sola opinión.
+- 🎨 **Visual UI**: Salida en colores para una lectura rápida en terminal.
+- ⚡ **Optimizado para HTB/CTF**: Diseñado para integrarse en tu flujo de trabajo diario.
+- 🌐 **Web Sync**: Abre CrackStation automáticamente con un solo clic.
+- 🐧 **100% Linux Native**: Compatible con Kali, Parrot y entornos personalizados.
 
 ---
 
 ## 📁 Estructura del Proyecto
 ```text
 UltraHash-Suite/
-├── 📄 hashid.sh     # Núcleo de la herramienta (Logic Engine)
-├── ⚙️ install.sh    # Script de despliegue automatizado
-└── 📘 README.md    # Documentación del sistema
+├── 📄 hashid.sh     # El cerebro: lógica de identificación
+├── ⚙️ install.sh    # El instalador: configura todo por ti
+└── 📘 README.md    # Este manual de combate
 ```
 
 ---
 
 ## 🚀 Instalación Relámpago
 
-Si tienes **pipx** y **ruby** instalados, el proceso es automático:
+Prepara tu arsenal con estos comandos (puedes copiarlos y pegarlos directamente):
 
 ```bash
-# 1. Clonar el arsenal
+# 1. Clona el repositorio
 git clone [https://github.com/TU_USUARIO/UltraHash-Suite.git](https://github.com/TU_USUARIO/UltraHash-Suite.git)
 cd UltraHash-Suite
 
-# 2. Dar permisos y ejecutar el instalador
+# 2. Permisos de ejecución
 chmod +x install.sh
+
+# 3. ¡Despliegue!
 ./install.sh
 
-# 3. Recargar el entorno (si usas ZSH)
+# 4. Recarga tu entorno
 source ~/.zshrc
 ```
 
-### 🧪 Requisitos del Sistema
-Para un funcionamiento manual, asegúrate de tener:
-- `pipx` (para Name-That-Hash)
-- `ruby-full` & `gem` (para Haiti-hash)
-- `xdg-open` (para consultas web)
+### 🧪 Requisitos Manuales
+Si prefieres el camino largo, asegúrate de tener instalados los siguientes paquetes:
+`apt`, `pipx`, `ruby-full`, `gem` y `xdg-open`.
 
 ---
 
 ## 🖥️ Uso en Combate
 
-Simplemente invoca `hashid` seguido del string que quieras analizar:
+Es tan simple como lanzar el comando seguido del hash:
 
+```bash
+hashid <tu_hash_aqui>
+```
+
+### 📝 Ejemplo Real:
 ```bash
 hashid 5f4dcc3b5aa765d61d8327deb882cf99
 ```
 
-### 🔄 Workflow de Análisis
-1. **INPUT**: El sistema recibe el hash.
-2. **IDENTIFY**: `Name-That-Hash` realiza la detección primaria.
-3. **ENRICH**: `Haiti` añade formatos de john/hashcat.
-4. **CRACK**: El sistema pregunta si deseas lanzar la consulta a `CrackStation` para un cracking instantáneo.
+**¿Qué ocurre internamente?**
+1. 🟢 **Name-That-Hash** identifica el algoritmo y muestra sus conclusiones.
+2. 🔵 **Haiti** te proporciona los códigos de modo específicos para tus herramientas de cracking (Hashcat/John).
+3. 🌐 **El Suite** te preguntará de forma interactiva si deseas abrir el navegador para buscar la contraseña en texto claro en CrackStation.
 
 ---
 
-## 🏴‍☠️ Escenarios de Uso en CTF/HTB
-* **DB Dumps**: Identificación de algoritmos en bases de datos comprometidas.
-* **Web Analysis**: Análisis de cookies o tokens de sesión.
-* **PrivEsc**: Identificación de hashes extraídos de `/etc/shadow` o volcados de memoria.
-
----
-
-## 📜 Disclaimer
-> [!IMPORTANT]
-> Esta herramienta ha sido creada exclusivamente con fines **educativos** y para su uso en entornos controlados (CTF, Hack The Box, laboratorios). El uso de UltraHash-Suite sobre sistemas o datos sin autorización expresa es ilegal y responsabilidad única del usuario. **Keep it legal, keep it ethical.** 🛡️
+## 🛠️ Tecnologías Usadas
+- **Bash** (The core)
+- **Name-That-Hash** (Python engine)
+- **Haiti** (Ruby engine)
+- **CrackStation** (Web integration)
 
 ---
 
 ## 🤝 Contribuciones
-¿Tienes ideas para mejorar el suite?
-- [ ] Añadir soporte para `HashID` clásico.
-- [ ] Integración con APIs de búsqueda de planos (MD5Decrypt, etc).
-- [ ] Modo silencioso para scripting.
-
-¡Siéntete libre de abrir un **Pull Request**!
-
----
-```
+¡Toda ayuda es bienvenida para mejorar el arsenal! 👾
+- [ ] Soporte para más motores online (MD5Decrypt, etc).
+- [ ] Modo de salida en JSON para integración con otros scripts.
+- [ ] Interfaz interactiva mejorada con menús tipo `fzf`.
 
 ---
 
-### 💡 Consejos para el repositorio:
-1. **Añade un GIF**: Si puedes, graba la pantalla usando `asciinema` o haz un GIF de la herramienta funcionando. Los repositorios con visuales atraen mucha más atención.
-2. **License**: No olvides incluir un archivo `LICENSE` (normalmente MIT o GPL) para que otros sepan cómo pueden usar tu código.
-3. **Tags**: En GitHub, añade etiquetas como `#ctf`, `#htb`, `#hacking`, `#cybersecurity` y `#bash` para que la gente te encuentre.
-
-¿Quieres que te ayude con el código del `install.sh` para que se encargue de todo automáticamente?
+## ⚠️ Aviso Importante (Disclaimer)
+> [!CAUTION]
+> **UltraHash-Suite** ha sido creada exclusivamente para fines **educativos** y para su uso en entornos autorizados como CTFs, Hack The Box y laboratorios de práctica. El autor no se hace responsable del uso indebido sobre sistemas ajenos. **¡Hackea con ética o no hackees!** 🛡️
