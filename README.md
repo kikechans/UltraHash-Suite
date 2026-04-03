@@ -1,7 +1,4 @@
 # UltraHash-Suite
-Aquí tienes el archivo `README.md` adaptado con un estilo **"Hacker/CTF"** más visual y profesional, ideal para que destaque en tu perfil de GitHub. He añadido insignias (badges), una estructura de directorios limpia y bloques de código optimizados.
-
----
 
 ```markdown
 # 🔐 UltraHash-Suite
